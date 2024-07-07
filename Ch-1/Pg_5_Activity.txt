@@ -1,0 +1,20 @@
+declare a string named "name" and give it the value "Fido"
+initiate a "myDog" object of the class "Dog" with properties "name" and "size"
+subtract 5 from the value of "size (25)" and give it to variable "x"
+
+perform the following statements while "x" is greater than 3
+call the "play" method of the "myDog" object
+end the loop
+
+initiate an array of integers named "numList" with values 2, 4, 6, 8
+print out "Dog: Fido" 
+declare a string named "num" and give it the value "8"
+declare an integer named "z", parse the value of "num" as an integer and give it to "z"
+
+initiate a "try-catch" block
+open the "myFile.txt" file for reading
+end of the "try" block
+initiate the "catch" block if the "try" doesn't work with a an error "ex" of the type "FileNotFoundException"
+print out "File not found"
+end of the "catch" block
+
