@@ -1,0 +1,62 @@
+Pg-60:  The current value of pets[2] is "null"
+        pets[3] = new Dog();
+
+        NOTE: """Implicit Widening""": You can’t stick a double into an int array (spillage, remember?). You can, however, put a byte into an int array, because a byte will always fit into an int-sized cup. This is known as an implicit widening.
+
+        NOTE: String are a special type of references, you can create and assign them as primitives even though they're references. This is because a string is an array of characters and an array "variable" is always a reference to it's first element.
+
+Pg-63:  Be The Compiler
+
+        A.  Compilation error, myBooks[0], [1], and [2] aren't assigned Books objects and therefore don't have any properties.
+        Correction:
+            class Books {
+                String title;
+                String author;
+            }
+            class BooksTestDrive {
+                public static void main(String[] args) {
+                    Books[] myBooks = new Books[3];
+                    int x = 0;
+
+                    myBooks[0] = new Books();
+                    myBooks[1] = new Books();
+                    myBooks[2] = new Books();
+
+                    myBooks[0].title = "The Grapes of Java";
+                    myBooks[1].title = "The Java Gatsby";
+                    myBooks[2].title = "The Java Cookbook";
+                    myBooks[0].author = "bob";
+                    myBooks[1].author = "sue";
+                    myBooks[2].author = "ian";
+
+                    while (x < 3) {
+                        System.out.print(myBooks[x].title);
+                        System.out.print(" by ");
+                        System.out.println(myBooks[x].author);
+                        x = x + 1;
+                    }
+                }
+            }
+
+        B.  Runtime Error: The "h" is of size 3 -> max index = 2, but in the while loop the value of "z" goes upto 3 and references h[3] which doesn't exist and is out of bounds.
+        Correction:
+            class Hobbits {
+                String name;
+                public static void main(String[] args) {
+                    Hobbits[] h = new Hobbits[3];
+                    int z = 0;
+                    while (z < 3) {
+                        h[z] = new Hobbits();
+                        h[z].name = "bilbo";
+                        if (z == 1) {
+                            h[z].name = "frodo";
+                        }
+                        if (z == 2) {
+                            h[z].name = "sam";
+                        }
+                        System.out.print(h[z].name + " is a ");
+                        System.out.println("good Hobbit name");
+                        z = z + 1;
+                    }
+                }
+            }
