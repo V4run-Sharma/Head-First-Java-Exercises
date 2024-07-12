@@ -1,0 +1,7 @@
+Be the Compiler:
+A:  42 84
+
+B:  getTime has a void return type but it returns the value of time.
+    Correction: String getTime() {
+                    return time;
+                }
