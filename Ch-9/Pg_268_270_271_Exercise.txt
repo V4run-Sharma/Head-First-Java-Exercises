@@ -1,0 +1,15 @@
+Pg 268
+1.  copyGC = null;
+2.  gc2 = null;
+3.  newGC = gc3;
+4.  gc1 = null;
+5.  newGC = null;
+6.  gc4 = null;
+7.  gc3 = gc2;
+8.  gc1 = gc4;
+9.  gc3 = null;
+
+Pg 269
+
+Pg 270-271
+The V2Radiator constructor required an ArrayList as an argument. Consequently, each time the V3Radiator constructor was called, it passed an ArrayList to the V2Radiator constructor via the `super()` call. Since all the Bot classes generate SimUnits, modifying the SimUnit class constructor to print a message each time a SimUnit was created would have quickly revealed the issue. This resulted in the creation of five additional V2Radiator SimUnits. If the assessment was correct, the total power consumption would be 120, contrary to the 100 predicted by Sarah’s ratios.
