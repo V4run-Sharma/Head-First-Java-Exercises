@@ -1,0 +1,6 @@
+The coffee machine gave Alex an Americano because the `sorted()` method sorted the coffee names alphabetically, not by their strength. To get the weakest coffee, the sorting should be done based on the coffee's strength:
+
+Optional<String> afternoonCoffee = coffees.stream()
+    .sorted(Comparator.comparingInt(Coffee::getStrength))
+    .map(Coffee::getName)
+    .findFirst();
